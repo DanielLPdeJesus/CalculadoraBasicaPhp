@@ -22,11 +22,11 @@
                         <form method="post">
                             <div class="form-group">
                                 <label for="numero1">Número 1:</label>
-                                <input type="number" id="numero1" name="numero1" class="form-control" required>
+                                <input type="number" step="any" id="numero1" name="numero1" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="numero2">Número 2:</label>
-                                <input type="number" id="numero2" name="numero2" class="form-control" required>
+                                <input type="number" step="any" id="numero2" name="numero2" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="operacion">Operación:</label>
