@@ -33,6 +33,9 @@
                                 <select id="operacion" name="operacion" class="form-control" required>
                                     <option value="suma" <?php echo isset($_POST['operacion']) && $_POST['operacion'] == 'suma' ? 'selected' : ''; ?>>Suma</option>
                                     <option value="resta" <?php echo isset($_POST['operacion']) && $_POST['operacion'] == 'resta' ? 'selected' : ''; ?>>Resta</option>
+                                    <option value="multiplicacion" <?php echo isset($_POST['operacion']) && $_POST['operacion'] == 'multiplicacion' ? 'selected' : ''; ?>>Multiplicación</option>
+                                    <option value="division" <?php echo isset($_POST['operacion']) && $_POST['operacion'] == 'division' ? 'selected' : ''; ?>>División</option>
+
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Calcular</button>
@@ -50,7 +53,18 @@
                                     break;
                                 case 'resta':
                                     $resultado = $numero1 - $numero2;
-                                    break;  
+                                    break; 
+                                case 'multiplicacion':
+                                        $resultado = $numero1 * $numero2;
+                                        break;
+                                case 'division':
+                                        if ($numero2 != 0) {
+                                            $resultado = $numero1 / $numero2;
+                                        } else {
+                                            echo "<div class='alert alert-danger mt-3'>No se puede dividir por cero</div>";
+                                            exit();
+                                        }
+                                        break; 
                                 default:
                                     echo "<div class='alert alert-danger mt-3'>Operación no válida</div>";
                                     exit();
