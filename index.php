@@ -9,7 +9,7 @@
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1">Calculadora de Daniel</span>
+  <span class="navbar-brand mb-0 h1">Calculadora de Daniel de Jesus</span>
 </nav>
     <div class="container mt-5">
         <div class="row justify-content-center">
